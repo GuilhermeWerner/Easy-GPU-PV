@@ -11,8 +11,8 @@ Param (
 #>
 
 Param (
-[string]$VMName,
-[string]$GPUName,
+[string]$VMName = "Win10",
+[string]$GPUName = "AUTO",
 [string]$Hostname = $ENV:Computername
 )
 
