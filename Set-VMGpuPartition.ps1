@@ -1,4 +1,4 @@
-$VMName = "Win11"
+$VMName = "win11"
 
 Set-VMProcessor -VMName $VMName -ExposeVirtualizationExtensions $true
 
@@ -9,8 +9,5 @@ Set-VM -GuestControlledCacheTypes $true -VMName $VMName
 Set-VM -LowMemoryMappedIoSpace 1Gb -VMName $VMName
 Set-VM –HighMemoryMappedIoSpace 32GB –VMName $VMName
 
-$VMObj = Get-VM "WinSrv22"
-Remove-VMGpuPartitionAdapter -VM $VMObj
-
-
-
+#$VMObj = Get-VM "win11"
+#Remove-VMGpuPartitionAdapter -VM $VMObj

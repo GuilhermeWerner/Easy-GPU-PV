@@ -1,4 +1,4 @@
-﻿<# 
+﻿<#
 If you are opening this file in Powershell ISE you should modify the params section like so...
 Remember: GPU Name must match the name of the GPU you assigned when creating the VM...
 
@@ -11,7 +11,7 @@ Param (
 #>
 
 Param (
-[string]$VMName = "Win11",
+[string]$VMName = "win11",
 [string]$GPUName = "AUTO",
 [string]$Hostname = $ENV:Computername
 )
@@ -28,7 +28,7 @@ If ($VM.state -eq "Running") {
 if ($VM.state -ne "Off"){
     "Attemping to shutdown VM..."
     Stop-VM -Name $VMName -Force
-    } 
+    }
 
 While ($VM.State -ne "Off") {
     Start-Sleep -s 3
